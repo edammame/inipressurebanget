@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="try.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="flex-item">
+          <h1>BMI Calculator</h1>
+          <div class="content">
+
+            <div class="gender">
+                <label class="container">
+                    <input type="radio" name="radio" id="m"><p class="text">Male</p>
+                    <span class="checkmark"></span>
+                  </label>
+
+
+                <label class="container">
+                    <input type="radio" name="radio" id="f" ><p class="text">Female</p>
+                      <span class="checkmark"></span>
+                    </label>
+
+            </div>
+
+              <div class="input">
+                <label for="height">Age</label>
+                <input type="text" class="text-input" id="age" autocomplete="off" required/>
+              </div>
+
+              <div class="containerHW">
+                <div class="inputH">
+                  <label for="height">Height(cm)</label>
+                  <input type="number" id="height" required>
+                </div>
+
+                <div class="inputW">
+                  <label for="weight">Weight(kg)</label>
+                  <input type="number" id="weight" required>
+                </div>
+              </div>
+
+            <br>
+            <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button></div>
+          
+
+        </div>
+          <div class="flex-item">
+            <div class="result">
+                <p>Your BMI</p>
+                <div id="result"></div>
+                <p class="comment"></p>
+              </div><br>
+
+              <div class="risk">
+                  <p class="underrisk">
+                    <ul>
+                      <li>malnutrition</li>
+                      <li>vitamin deficiencies</li>
+                      <li>anemia</li>
+                      <li>osteoporosis</li>
+                      <li>decreased immune function</li>
+                      <li>growth and development issues,</li>
+                    </ul>
+                  </p>
+  
+                  <p class="overrisk">
+                    <ul>
+                      <li>malnutrition</li>
+                      <li>Type 2 diabetes</li>
+                      <li>Coronary heart disease</li>
+                      <li>Stroke</li>
+                      <li>Gallbladder disease</li>
+                      <li>Osteoarthritis</li>
+                      <li>Many types of cancer</li>
+                      <li>Mental illness (clinical depression, anxiety, etc)</li>
+                    </ul>
+                  </p> 
+              </div>
+  
+             <div class="buttons">
+                <h4>Tips & Tricks!</h4>
+                <button class="under" onclick="underweight(this)" value="https://www.healthline.com/nutrition/how-to-gain-weight#Which-food-is-best-for-weight-gain?" style="margin: 10px;">Underweight</button>
+
+                <button class="over" onclick="overweight(this)" value="https://www.self.com/story/workout-tips" style="margin: 10px;">Overweight</button>
+        
+                <button class="obese" onclick="obese(this)" value="https://health.usnews.com/best-diet/best-healthy-eating-diets" style="margin: 10px;">Obese</button>
+            
+                <button class="extreme" onclick="extreme(this)" value="https://anticancerlifestyle.org/diet-landing-page/?adgroup=Healthy%20Eating&utm_source=google&utm_medium=cpc&utm_campaign=Vital%20-%20Diet%20-%20Max%20Conversions&utm_term=how%20to%20eat%20healthy&utm_content=662037967845&hsa_acc=5646275131&hsa_cam=20249451282&hsa_grp=150605229056&hsa_ad=662037967845&hsa_src=g&hsa_tgt=kwd-111655785&hsa_kw=how%20to%20eat%20healthy&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwtuOlBhBREiwA7agf1nfVJiGi3F5N6LINPcSY2IfWAbzP_QIo1vGtq8Xa7rDoTcXdjRgqBxoCC34QAvD_BwE" style="margin: 10px;">Extremely Obese</button>
+              </div>
+          </div>
+            
+        </div>
+    </div>
+      
+
+    <div id="myModal" class="modal">
+    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div></div>
+    
+<script src="try.js"></script>
+
+
+</body>
+</html>

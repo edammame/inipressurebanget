@@ -1,0 +1,328 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    //direction: rtl; // right-to-left
+    min-height: 100vh;
+    background: #E3DFFD;   
+  }
+  
+.flex-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+  
+.flex-item {
+    background-color: #49473c;
+    width: 800px;
+    height: 650px;
+    margin: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+  .flex-item:first-child {
+    margin-right: 10px;
+    width: 500px;
+    height: 650px;
+    background-color: #49473c;
+}
+
+h1 {
+    color: #B799FF;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px 0;
+    
+}
+
+.gender {
+    display: flex;
+    border: none;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+}    
+
+.gender .container {
+    display: inline;
+    position: relative;
+    align-items: center;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+}
+  
+.gender .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.gender label{
+    bottom: 10px;
+    color: #B799FF;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+   
+  .gender.container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+   .gender .container input:checked ~ .checkmark {
+    background-color: #F2BED1;
+  }
+  
+   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .gender .container input:checked ~ .checkmark:after {
+    display:inline-flex;
+  }
+  
+  .gender .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+input{
+    display:inline-block;
+    background: #fff;
+    outline: none;
+    border-radius: 12px;
+    border-style: hidden;
+    text-align: center;
+    width: auto;
+    height: 50px;
+    margin: 20px 0px 20px 0px;
+    justify-content: center;
+}
+
+.input{
+    align-content: center;
+}
+
+.input label {
+    display: inline;
+    font-size: 18px;
+    font-weight: 600;
+    color: #B799FF;
+}
+
+.input input {
+    width: 65%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Helvetica", sans-serif;
+    color: #ACBCFF;
+}
+
+.inputH {
+    
+}
+
+.inputH label {
+    display: inline;
+    font-size: 18px;
+    font-weight: 600;
+    color: #B799FF;
+}
+
+.inputH input {
+    width: 65%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Helvetica", sans-serif;
+    color: #ACBCFF;
+}
+
+.inputW {
+    margin-bottom: 60px;
+}
+
+.inputW label {
+    display: inline;
+    font-size: 18px;
+    font-weight: 600;
+    color: #B799FF;
+}
+
+.inputW input {
+    width: 65%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Helvetica", sans-serif;
+    color: #ACBCFF;
+}
+
+.containerHW {
+    display:inline-table;
+    justify-content: center;
+    align-items: center;
+} 
+
+button.calculate {
+    cursor: pointer;
+    font-family: "Helvetica", sans-serif;
+    color: #fff;
+    background: #E5D1FA;
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 20px 0;
+    width: 80%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+    margin-bottom: 30px;
+}
+  button.calculate:hover {
+    background: #E5D1FA;
+}
+
+.result {
+    padding-top: 30px;
+}
+.result p {
+    font-weight: 600;
+    font-size: 30px;
+    color: #B799FF;
+    margin-bottom: 10px;
+}
+.result #result {
+    font-size: 60px;
+    font-weight: 900;
+    color: #F2BED1;
+    display: inline-block;
+    padding: 10px 8px;
+}
+  
+#comment {
+    color: #F2BED1;
+    font-weight: 800;
+    font-size: 35pxs;
+}
+
+.comment {
+    display: block;
+    margin-top: 5px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 300px;
+  
+  }
+
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    height: 70px;
+    border-radius: 10px;
+  }
+  
+  #modalText {
+    margin: 0;
+    padding-top: 4px;
+    padding-right: 5px;
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif;
+    color:#B799FF;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+h4{
+    display: inline-block;
+    font-size: 15px;
+    background-color: #eaeaea;
+    padding: 6px 20px;
+    border-radius: 65px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 70px;
+    margin-left: 8%;
+}
+
+button.under {
+    background: #fff;
+    height: 28px;
+    border-radius: 12px;
+    border-style: hidden;
+}
+
+button.over {
+    background: #fff;
+    height: 28px;
+    border-radius: 12px;
+    border-style: hidden;
+}
+
+button.obese {
+    background: #fff;
+    height: 28px;
+    border-radius: 12px;
+    border-style: hidden;
+}
+
+button.extreme {
+    background: #fff;
+    height: 28px;
+    border-radius: 12px;
+    border-style: hidden;
+}
+ 
+.risk {
+    position: absolute;
+    display: flex;
+    bottom: 28%;
+    margin-left: 4.5%;
+    text-align: left;
+}
+  
+  
+  
+  
+
+
